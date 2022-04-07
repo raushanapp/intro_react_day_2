@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./App.css"
+
 
 function App() {
+  const mobile = ["Android", "Blckberry","Iphone","Windows Phone"];
+  const manufact = ["Samsung", "HTC","Micromax","Apple"];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className ="Mobile">
+        <h1>Mobile Operating System</h1>
+         <ul>
+           {mobile.map((e)=>{
+             return <li>{e}</li>
+           })}
+         </ul>
+      </div>
+      <div className ="Manu">
+        <h1>Mobile Manufacturers</h1>
+        <ul type ="square">
+          {manufact.map((e)=>{
+            return <li>{e}</li>
+          })}
+        </ul>
+      </div>
+
     </div>
   );
 }
